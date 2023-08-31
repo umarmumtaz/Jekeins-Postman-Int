@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "f248b02d-c663-40f4-af08-4ded9fe71960",
+		"name": "Dockerwith-StudentApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15420825",
+		"_collection_link": "https://red-trinity-370152.postman.co/workspace/Team-Workspace~7dfbb988-6680-4946-8c19-61e9418c08fa/collection/15420825-f248b02d-c663-40f4-af08-4ded9fe71960?action=share&source=collection_link&creator=15420825"
+	},
+	"item": [
+		{
+			"name": "Search/get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check status code\", function(){\r",
+							"pm.expect(pm.response.code).to.eq(200)\r",
+							"\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"body\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"programme\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json111clear"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/student/105",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"student",
+						"105"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "Create Student",
+					"host": [
+						"Create Student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put/Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \r\n        \"firstName\": \"jessica\",\r\n        \"lastName\": \"barbi\",\r\n        \"email\": \"egestas.rhoncus.Proin@massaQuisqueporttitor.org\",\r\n        \"programme\": \"Financial Analysis\",\r\n        \"courses\": [\r\n            \"Accounting\",\r\n            \"Statistics\"\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/student/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"student",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bestbuy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
