@@ -231,7 +231,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5faad23a-44a2-4661-85c6-b0553e71ae26",
+				"id": "29212349-eee4-40a5-bba8-f077e7479477",
 				"type": "text/javascript",
 				"exec": [
 					"console.log (\"hello world....\"); //print simple text",
@@ -249,7 +249,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "65ab9978-d606-4f3d-8ac7-783080284c8a",
+				"id": "77353c8e-5a20-413d-8617-8a62b1018417",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -260,7 +260,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "http://localhost:8091/"
+			"value": "http://localhost:8091"
 		}
 	]
 }
