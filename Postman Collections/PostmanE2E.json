@@ -243,12 +243,11 @@
 							"script": {
 								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
 								"exec": [
-									"const responseBody = pm.response.json();\r",
+									"const responseBodyD = pm.response.json();\r",
 									"\r",
 									"pm.test(\"test the validations \", function(){\r",
-									"pm.response.to.have.status(201)\r",
-									"\r",
-									"\r",
+									"pm.response.to.have.status(500);\r",
+									"pm.expect(responseBodyD).have.property('error');\r",
 									"\r",
 									"\r",
 									"\r",
@@ -267,7 +266,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test22@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
