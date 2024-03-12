@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "6e5bb28c-8228-403f-92ee-b983f8ecb099",
+		"name": "Testing with docker server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "products listing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec6b2592-597e-488b-a07e-a61a855a55a1",
+								"exec": [
+									"pm.test(\"Status code is Success\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test('Response body contains expected data', function () {\r",
+									"    // Parse the response body from JSON string to JavaScript object\r",
+									"    var responseBody = pm.response.json();\r",
+									"    // Check if the response body contains the expected key-value pairs\r",
+									" pm.expect(responseBody.upc).to.equal('041333216010');\r",
+									"    pm.expect(responseBody.price).to.equal('5.99');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ad6ad997-c90f-40a4-8965-f65bbcf9e973",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "single product",
+					"id": "6111b1fe-1100-4fac-b372-ee336ffa7d4b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products?id=9999685",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9999685"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categories listing",
+					"id": "1c882592-1233-4bc7-81d7-d6f698049537",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/categories"
+					},
+					"response": []
+				}
+			],
+			"id": "2f3b7e84-1c82-4db7-af6c-086654be818b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9c2a38c3-a40e-4441-b911-b15abf5ee56c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "dcd77910-4264-48cd-9737-bf727c96fb0e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Verify response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Post products",
+			"item": [
+				{
+					"name": "Add product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f80813d-8878-4375-8dc5-1843507e28a1",
+								"exec": [
+									"// Check the response status code TC -01",
+									"pm.test(\"Status code is Success\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
+									"});",
+									"// Check the response body TC 02",
+									"pm.test('Response body contains expected data', function () {",
+									"    // Parse the response body from JSON string to JavaScript object",
+									"    var responseBody = pm.response.json();",
+									"    // Check if the response body contains the expected key-value pairs",
+									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
+									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "33fe4c94-bfcd-4bb9-bfbb-512574ee658a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0e74c300-f251-485c-b385-59a1e732286b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \r\n            \"name\": \"Duracell - AA Batteries (8-Pack)\",\r\n            \"type\": \"mobile\",\r\n            \"price\": 45,\r\n            \"upc\": \"041333825014\",\r\n            \"shipping\": 0,\r\n            \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n            \"manufacturer\": \"Duracell\",\r\n            \"model\": \"MN1500B8Z\",\r\n            \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n            \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n    \r\n        }\r\n    \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "69789979-3690-40a7-9f56-e22d3fd801d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products?id=9999772",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9999772",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "843fa981-91d7-4297-8cff-53a25db41b3b"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5faad23a-44a2-4661-85c6-b0553e71ae26",
+				"type": "text/javascript",
+				"exec": [
+					"console.log (\"hello world....\"); //print simple text",
+					"let urlVar = pm.variables.get(\"url\"); ",
+					"console.log(\"value for url variable is \"+urlVar); //print base url or set ones",
+					"pm.variables.set(\"set variable POSTMAN\",\"print out this one\");   ",
+					"console.log(pm.variables.get(\"set variable POSTMAN\")); //simplly printout the postman set comman",
+					"let globalvar=pm.globals.get(\"Env\");",
+					"console.log(globalvar);",
+					"let globalvar2 =pm.globals.get(\"Name\");",
+					"console.log(globalvar2);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "65ab9978-d606-4f3d-8ac7-783080284c8a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8091/"
+		}
+	]
+}
