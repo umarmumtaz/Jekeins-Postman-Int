@@ -133,7 +133,7 @@
 							"script": {
 								"id": "6f80813d-8878-4375-8dc5-1843507e28a1",
 								"exec": [
-									"// Check the response status code TC -01",
+									"// Check the response status code TC -01 -Assertions",
 									"pm.test(\"Status code is Success\", function () {",
 									"    pm.response.to.have.status(201);",
 									"});",
