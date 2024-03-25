@@ -177,7 +177,7 @@
 								"exec": [
 									"const code =pm.globals.get(\"url\")\r",
 									"const val =pm.variables.replaceIn('{{$randomInt}}');\r",
-									"pm.collectionVariables.set('upc'), code+val;"
+									"pm.collectionVariables.set('mobile', code+val);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -325,6 +325,10 @@
 		},
 		{
 			"key": "upc",
+			"value": ""
+		},
+		{
+			"key": "mobile",
 			"value": ""
 		}
 	]
