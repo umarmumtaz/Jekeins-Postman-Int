@@ -177,7 +177,7 @@
 								"exec": [
 									"const code =pm.globals.get(\"url\")\r",
 									"const val =pm.variables.replaceIn('{{$randomInt}}');\r",
-									"pm.collectionVariables.set('mobile', code+val);"
+									"pm.collectionVariables.set('upc', code+val);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -291,7 +291,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "10ed391f-49b2-4b81-bea4-f6cb1f0e4a4d",
+				"id": "e2517dda-5bbc-42d4-82e2-67ecbd3fe759",
 				"type": "text/javascript",
 				"exec": [
 					"console.log (\"hello world....\"); //print simple text",
@@ -309,7 +309,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b61a6377-e4d7-47d9-bd97-82126b2ee2bc",
+				"id": "6b00f969-8249-4e51-b04b-ad0ddf795f30",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -325,11 +325,8 @@
 		},
 		{
 			"key": "upc",
-			"value": ""
-		},
-		{
-			"key": "mobile",
-			"value": ""
+			"value": "",
+			"type": "string"
 		}
 	]
 }
