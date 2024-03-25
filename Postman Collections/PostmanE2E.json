@@ -175,7 +175,7 @@
 							"script": {
 								"id": "33fe4c94-bfcd-4bb9-bfbb-512574ee658a",
 								"exec": [
-									"const code =pm.environment.get(\"price\")\r",
+									"const code =pm.globals.get(\"url\")\r",
 									"const val =pm.variables.replaceIn('{{$randomInt}}');\r",
 									"pm.collectionVariables.set('upc'), code+val;"
 								],
@@ -322,6 +322,10 @@
 			"key": "url",
 			"value": "http://localhost:8091",
 			"type": "string"
+		},
+		{
+			"key": "upc",
+			"value": ""
 		}
 	]
 }
