@@ -62,7 +62,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/products?id=9999685",
+							"raw": "{{url}}/products?id=9999775",
 							"host": [
 								"{{url}}"
 							],
@@ -72,7 +72,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "9999685"
+									"value": "9999775"
 								}
 							]
 						}
@@ -175,6 +175,8 @@
 							"script": {
 								"id": "33fe4c94-bfcd-4bb9-bfbb-512574ee658a",
 								"exec": [
+									"//dynamicall generated variables 3-lec\r",
+									"\r",
 									"const code =pm.globals.get(\"url\")\r",
 									"const val =pm.variables.replaceIn('{{$randomInt}}');\r",
 									"pm.collectionVariables.set('upc', code+val);"
