@@ -168,18 +168,6 @@
 						"url": "{{url}}/categories"
 					},
 					"response": []
-				},
-				{
-					"name": "students list",
-					"id": "84ba502e-86db-4663-819f-4c7834a7fd04",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "2f3b7e84-1c82-4db7-af6c-086654be818b",
