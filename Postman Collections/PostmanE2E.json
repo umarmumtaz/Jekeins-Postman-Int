@@ -241,16 +241,12 @@
 							"script": {
 								"id": "33fe4c94-bfcd-4bb9-bfbb-512574ee658a",
 								"exec": [
-									"//dynamicall generated variables 3-lec\r",
-									"\r",
-									"// const code =pm.globals.get(\"url\")\r",
-									"// const val =pm.variables.replaceIn('{{$randomInt}}');\r",
-									"// pm.collectionVariables.set('upc', code+val);\r",
+									"//dynamicall generated variables for ups that is settingup the logic\r",
 									"\r",
 									"const code =( pm.globals.get(\"companyCode\")) ;\r",
 									"console.log(code);\r",
 									"const value =pm.variables.replaceIn('{{$randomInt}}');\r",
-									""
+									"pm.collectionVariables.set('upc', code+value);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -266,7 +262,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "        {\r\n            \r\n            \"name\": \"Duracell - AA Batteries (8-Pack)\",\r\n            \"type\": \"mobile\",\r\n            \"price\": 451,\r\n            \"upc\": \"{{upc}}\",\r\n            \"shipping\": 0,\r\n            \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n            \"manufacturer\": \"Duracell\",\r\n            \"model\": \"MN1500B8Z\",\r\n            \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n            \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n    \r\n        }\r\n    \r\n",
+							"raw": "{\r\n    \"name\": \"Duracell - AA Batteries (8-Pack)\",\r\n    \"type\": \"mobile\",\r\n    \"price\": 451,\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -364,7 +360,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4f74c27f-4b8c-49fa-b64f-eae4b1b11814",
+				"id": "e57d9c4f-cf49-4eb9-a1e2-71b5789b9023",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -382,7 +378,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a0d147e8-7a87-4498-9e60-381f221a5af0",
+				"id": "db238ab0-9346-4f8c-bb60-5f85f0fd6574",
 				"type": "text/javascript",
 				"exec": [
 					""
