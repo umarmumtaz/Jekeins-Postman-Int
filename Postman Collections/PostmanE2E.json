@@ -247,7 +247,9 @@
 									"// const val =pm.variables.replaceIn('{{$randomInt}}');\r",
 									"// pm.collectionVariables.set('upc', code+val);\r",
 									"\r",
-									"console.log(pm.globals.get(\"companyCode\"))\r",
+									"const code =( pm.globals.get(\"companyCode\")) ;\r",
+									"console.log(code);\r",
+									"const value =pm.variables.replaceIn('{{$randomInt}}');\r",
 									""
 								],
 								"type": "text/javascript",
@@ -362,25 +364,25 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e2517dda-5bbc-42d4-82e2-67ecbd3fe759",
+				"id": "4f74c27f-4b8c-49fa-b64f-eae4b1b11814",
 				"type": "text/javascript",
 				"exec": [
-					"console.log (\"hello world....\"); //print simple text",
-					"let urlVar = pm.variables.get(\"url\"); ",
-					"console.log(\"value for url variable is \"+urlVar); //print base url or set ones",
-					"pm.variables.set(\"set variable POSTMAN\",\"print out this one\");   ",
-					"console.log(pm.variables.get(\"set variable POSTMAN\")); //simplly printout the postman set comman",
-					"let globalvar=pm.globals.get(\"Env\");",
-					"console.log(globalvar);",
-					"let globalvar2 =pm.globals.get(\"Name\");",
-					"console.log(globalvar2);"
+					"// console.log (\"hello world....\"); //print simple text",
+					"// let urlVar = pm.variables.get(\"url\"); ",
+					"// console.log(\"value for url variable is \"+urlVar); //print base url or set ones",
+					"// pm.variables.set(\"set variable POSTMAN\",\"print out this one\");   ",
+					"// console.log(pm.variables.get(\"set variable POSTMAN\")); //simplly printout the postman set comman",
+					"// let globalvar=pm.globals.get(\"Env\");",
+					"// console.log(globalvar);",
+					"// let globalvar2 =pm.globals.get(\"Name\");",
+					"// console.log(globalvar2);"
 				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
-				"id": "6b00f969-8249-4e51-b04b-ad0ddf795f30",
+				"id": "a0d147e8-7a87-4498-9e60-381f221a5af0",
 				"type": "text/javascript",
 				"exec": [
 					""
