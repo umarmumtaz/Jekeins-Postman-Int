@@ -879,6 +879,18 @@
 			"type": "string"
 		},
 		{
+			"key": "name",
+			"value": ""
+		},
+		{
+			"key": "type",
+			"value": ""
+		},
+		{
+			"key": "price",
+			"value": ""
+		},
+		{
 			"key": {
 				"id": 9999933,
 				"name": "Umar",
@@ -894,18 +906,6 @@
 				"updatedAt": "2024-04-13T19:12:08.150Z",
 				"createdAt": "2024-04-13T19:12:08.150Z"
 			},
-			"value": ""
-		},
-		{
-			"key": "name",
-			"value": ""
-		},
-		{
-			"key": "type",
-			"value": ""
-		},
-		{
-			"key": "price",
 			"value": ""
 		}
 	]
