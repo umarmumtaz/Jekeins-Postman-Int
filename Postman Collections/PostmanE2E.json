@@ -199,7 +199,7 @@
 									"console.log(testVariable1)",
 									"",
 									"pm.test(\"verify the value with inputing the variable\",function(){",
-									"    pm.expect(testVariable1[1].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
+									"    pm.expect(testVariable1[0].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
 									"})",
 									"",
 									""
@@ -647,7 +647,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3fce1d32-a844-4802-8695-c28f6f41865c",
+				"id": "f78ccd7f-60f2-477e-9da6-a7c9dec47c39",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -665,7 +665,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a3dba287-3682-442c-bb57-1c1dbbe0ad02",
+				"id": "83df3447-60e2-4728-a3de-ff505ac68a6b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -689,13 +689,9 @@
 			"value": ""
 		},
 		{
-			"key": "price_value",
+			"key": "user_name",
 			"value": "",
 			"type": "string"
-		},
-		{
-			"key": "user_name",
-			"value": ""
 		}
 	]
 }
