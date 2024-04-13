@@ -340,7 +340,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "verify message and schema",
 					"event": [
 						{
 							"listen": "test",
@@ -384,6 +384,50 @@
 						}
 					],
 					"id": "54386b2e-bed8-4af3-8713-c14f67c19250",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2dcffcdd2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8090/student/"
+					},
+					"response": []
+				},
+				{
+					"name": "eee",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
+								"exec": [
+									"const responseBodyD = pm.response.json();\r",
+									"\r",
+									"pm.test(\"test the code/response message after post \", function(){\r",
+									"pm.response.to.have.status(500);\r",
+									"pm.expect(responseBodyD).to.have.property('error');\r",
+									"pm.expect(responseBodyD.error).to.eql('Email address already exists')\r",
+									"\r",
+									"\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "4650495c-3264-457f-ac37-be2260e5fd3a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
