@@ -720,6 +720,42 @@
 					"response": []
 				},
 				{
+					"name": "delete product",
+					"id": "8d61da97-4756-4166-8295-ea21d924e196",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products?id=9999990",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9999990"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "verify message and schema",
 					"event": [
 						{
