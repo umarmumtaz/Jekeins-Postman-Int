@@ -254,6 +254,7 @@
 									"pm.test('Response body contains expected data', function () {",
 									"    // Parse the response body from JSON string to JavaScript object",
 									"    var responseBody = pm.response.json();",
+									"    console.log(responseBody)",
 									"    // Check if the response body contains the expected key-value pairs",
 									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
 									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
