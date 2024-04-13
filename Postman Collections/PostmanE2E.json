@@ -590,7 +590,7 @@
 									"\r",
 									"pm.collectionVariables.set(\"type_name\",pm.iterationData.get(\"type\"));\r",
 									"\r",
-									"\r",
+									"pm.collectionVariables.set(\"price_name\", pm.iterationData.get(\"price\"));\r",
 									""
 								],
 								"type": "text/javascript",
@@ -607,7 +607,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"{{user_name}}\",\r\n    \"type\": \"{{type_name}}\",\r\n    \"price\": 451,\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"{{user_name}}\",\r\n    \"type\": \"{{type_name}}\",\r\n    \"price\": {{price_name}},\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -877,7 +877,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f5fa2380-5eb1-4a99-a90d-5999eac20422",
+				"id": "0f415d9c-7eac-465b-807b-54fd19cbd3d0",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -895,7 +895,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "71b5748d-3121-4cca-9e93-f76d789b1c6a",
+				"id": "71193fcf-ccb5-402a-9dba-73ed7d051135",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -929,13 +929,13 @@
 			"type": "string"
 		},
 		{
+			"key": "name",
+			"value": ""
+		},
+		{
 			"key": "price_name",
 			"value": "",
 			"type": "string"
-		},
-		{
-			"key": "name",
-			"value": ""
 		}
 	]
 }
