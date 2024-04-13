@@ -187,7 +187,7 @@
 					"response": []
 				},
 				{
-					"name": "get prudct by variable",
+					"name": "get product by variable",
 					"event": [
 						{
 							"listen": "test",
