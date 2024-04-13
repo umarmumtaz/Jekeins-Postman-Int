@@ -357,8 +357,8 @@
 									"\r",
 									"// });\r",
 									"const responseBodyD = pm.response.json();\r",
-									"pm.test(\"test the code/response messagwe text \", function(){\r",
-									"\r",
+									"pm.test(\"verify the response message after post request \", function(){\r",
+									"pm.expect(responseBodyD).to.have.property('msg');\r",
 									"pm.expect(responseBodyD).to.eql(\"Student added\")\r",
 									"});"
 								],
@@ -376,7 +376,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2d2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2dcfcd2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
