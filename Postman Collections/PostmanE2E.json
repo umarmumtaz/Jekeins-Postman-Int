@@ -194,12 +194,14 @@
 							"script": {
 								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
 								"exec": [
-									"const testVariable1 =pm.response.json();\r",
-									"console.log(testVariable1)\r",
-									"pm.test(\"verify the value with inputing the variable\",function(){\r",
-									"pm.expect(testVariable1[0].price).to.eql(pm.collectionVariables.get(\"Price_value\"))\r",
-									"\r",
-									"})"
+									"const testVariable1 = pm.response.json();",
+									"console.log(testVariable1)",
+									"",
+									"pm.test(\"verify the value with inputing the variable\",function(){",
+									"    pm.expect(testVariable1[0].price).to.eql(pm.collectionVariables.get(\"price_value\"))",
+									"})",
+									"",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -458,7 +460,8 @@
 									"const code =( pm.globals.get(\"companyCode\")) ;\r",
 									"console.log(code);\r",
 									"const value =pm.variables.replaceIn('{{$randomInt}}');\r",
-									"pm.collectionVariables.set('upc', code+value);"
+									"pm.collectionVariables.set('upc', code+value);\r",
+									"pm.collectionVariables.set('price_value', 4500)"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -643,7 +646,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f375d4c4-1579-4deb-a11f-966ac690a39a",
+				"id": "3fce1d32-a844-4802-8695-c28f6f41865c",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -661,7 +664,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "06c0d55a-cf9b-4c50-aeb7-7399c4eb06f9",
+				"id": "a3dba287-3682-442c-bb57-1c1dbbe0ad02",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -685,7 +688,7 @@
 			"value": ""
 		},
 		{
-			"key": "Price_value",
+			"key": "price_value",
 			"value": "",
 			"type": "string"
 		}
