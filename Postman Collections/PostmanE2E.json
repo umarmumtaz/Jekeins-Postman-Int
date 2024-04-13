@@ -195,10 +195,11 @@
 								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
 								"exec": [
 									"const testVariable1 = pm.response.json();",
+									"",
 									"console.log(testVariable1)",
 									"",
 									"pm.test(\"verify the value with inputing the variable\",function(){",
-									"    pm.expect(testVariable1[0].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
+									"    pm.expect(testVariable1[1].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
 									"})",
 									"",
 									""
