@@ -460,9 +460,9 @@
 									"\r",
 									"const code =( pm.globals.get(\"companyCode\")) ;\r",
 									"console.log(code);\r",
-									"const value =pm.variables.replaceIn('{{$randomInt}}');\r",
+									"const value =pm.variables.replaceIn('{{$randomInt}}');//random\r",
 									"pm.collectionVariables.set('upc', code+value);\r",
-									"pm.collectionVariables.set('user_name', 'Umar');"
+									"pm.collectionVariables.set('user_name', 'Umar');//static value"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -647,7 +647,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0b9a290c-1267-4b3c-be65-d6679b6a827e",
+				"id": "45fdf75f-69a6-461e-b76f-39097d86c55f",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -665,7 +665,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "be044b6f-265c-4ff2-b0aa-9d2c7e440a2a",
+				"id": "99103b35-0055-4f07-80b5-f10b824c94fb",
 				"type": "text/javascript",
 				"exec": [
 					""
