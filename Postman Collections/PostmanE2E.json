@@ -421,29 +421,28 @@
 							"script": {
 								"id": "6f80813d-8878-4375-8dc5-1843507e28a1",
 								"exec": [
-									"// Check the response status code TC -01 -Assertions -",
-									"",
-									"",
-									"pm.test(\"Status code is Success\", function () {",
+									"pm.test('Status code is Success', function () {",
 									"    pm.response.to.have.status(201);",
-									"});",
+									"})",
 									"",
-									"pm.test(\"Successful POST request\", function () {",
-									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);",
-									"});",
-									"// Check the response body TC 02",
+									"pm.test('Successful POST request', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        201,",
+									"        202",
+									"    ]);",
+									"})",
+									"",
 									"pm.test('Response body contains expected data', function () {",
-									"    // Parse the response body from JSON string to JavaScript object",
 									"    var responseBody = pm.response.json();",
-									"    console.log(responseBody)",
-									"    console.log(responseBody.id)",
-									"    const productid=responseBody.id;",
-									"    pm.collectionVariables.set(\"product_id\",productid )",
-									"    // Check if the response body contains the expected key-value pairs",
+									"    console.log(responseBody);",
+									"    console.log(responseBody.id);",
+									"    const productid = responseBody.id;",
+									"    pm.collectionVariables.set('product_id', productid);",
 									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
 									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
-									"    ",
-									"});",
+									"})",
+									"",
+									"",
 									"",
 									""
 								],
@@ -470,6 +469,81 @@
 						}
 					],
 					"id": "0e74c300-f251-485c-b385-59a1e732286b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{user_name}}\",\r\n    \"type\": \"mobile\",\r\n    \"price\": 451,\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "ID validation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f80813d-8878-4375-8dc5-1843507e28a1",
+								"exec": [
+									"pm.test('Status code is Success', function () {",
+									"    pm.response.to.have.status(201);",
+									"})",
+									"",
+									"pm.test('Successful POST request', function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([",
+									"        201,",
+									"        202",
+									"    ]);",
+									"})",
+									"",
+									"pm.test('Response body contains expected data', function () {",
+									"    var responseBody = pm.response.json();",
+									"    console.log(responseBody);",
+									"    console.log(responseBody.id);",
+									"    const productid = responseBody.id;",
+									"    pm.collectionVariables.set('product_id', productid);",
+									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
+									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
+									"})",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "33fe4c94-bfcd-4bb9-bfbb-512574ee658a",
+								"exec": [
+									"//dynamicall generated variables for ups that is settingup the logic\r",
+									"\r",
+									"const code =( pm.globals.get(\"companyCode\")) ;\r",
+									"console.log(code);\r",
+									"const value =pm.variables.replaceIn('{{$randomInt}}');//random\r",
+									"pm.collectionVariables.set('upc', code+value);\r",
+									"pm.collectionVariables.set('user_name', 'Umar');//static value"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "c9eaec71-4ed6-4203-afb4-2c1228eda3c2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
