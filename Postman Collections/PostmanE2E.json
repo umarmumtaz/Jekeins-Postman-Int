@@ -54,6 +54,41 @@
 					"response": []
 				},
 				{
+					"name": "just product listing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec6b2592-597e-488b-a07e-a61a855a55a1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6e39a067-3728-4c97-a6c7-1b511fad8d46",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products"
+					},
+					"response": []
+				},
+				{
 					"name": "single product",
 					"event": [
 						{
