@@ -89,6 +89,41 @@
 					"response": []
 				},
 				{
+					"name": "just product listing Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec6b2592-597e-488b-a07e-a61a855a55a1",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "39142cf3-af13-4905-a342-3efd66a9b275",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products"
+					},
+					"response": []
+				},
+				{
 					"name": "single product",
 					"event": [
 						{
@@ -619,7 +654,7 @@
 									"const code =( pm.globals.get(\"companyCode\")) ;\r",
 									"console.log(code);\r",
 									"const value =pm.variables.replaceIn('{{$randomInt}}');//random\r",
-									"pm.collectionVariables.set('upc', code+value);\r",
+									"pm.collectionVariables.set('upc_name', code+value);\r",
 									"//test with import data from CSV\r",
 									"pm.collectionVariables.set(\"user_name\",pm.iterationData.get(\"name\"));\r",
 									"console.log(pm.collectionVariables.get(\"user_name\"));\r",
@@ -641,7 +676,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"{{user_name}}\",\r\n    \"type\": \"{{type_name}}\",\r\n    \"price\": {{price_name}},\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"{{user_name}}\",\r\n    \"type\": \"{{type_name}}\",\r\n    \"price\": {{price_name}},\r\n    \"upc\": \"{{upc_name}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
