@@ -576,7 +576,13 @@
 									"console.log(code);\r",
 									"const value =pm.variables.replaceIn('{{$randomInt}}');//random\r",
 									"pm.collectionVariables.set('upc', code+value);\r",
-									"pm.collectionVariables.set('user_name', 'Umar');//static value"
+									"pm.collectionVariables.set(\"name\",pm.iterationData.get(\"user_name\"));\r",
+									"console.log(pm.collectionVariables.get(\"user_name\"));\r",
+									"\r",
+									"pm.collectionVariables.set(\"type\",pm.iterationData.get(\"type\"));\r",
+									"\r",
+									"pm.collectionVariables.set(\"price\", pm.iterationData.get(\"price\"));\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -888,6 +894,18 @@
 				"updatedAt": "2024-04-13T19:12:08.150Z",
 				"createdAt": "2024-04-13T19:12:08.150Z"
 			},
+			"value": ""
+		},
+		{
+			"key": "name",
+			"value": ""
+		},
+		{
+			"key": "type",
+			"value": ""
+		},
+		{
+			"key": "price",
 			"value": ""
 		}
 	]
