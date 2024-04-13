@@ -62,7 +62,6 @@
 								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
 								"exec": [
 									"const schemaTest = {\r",
-									"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\r",
 									"  \"type\": \"object\",\r",
 									"  \"properties\": {\r",
 									"    \"total\": {\r",
@@ -150,7 +149,11 @@
 									"    \"skip\",\r",
 									"    \"data\"\r",
 									"  ]\r",
-									"}"
+									"};\r",
+									"\r",
+									"pm.test(\"validate the json response schema\",function(){\r",
+									"pm.response.to.have.jsonSchema(schemaTest);\r",
+									"})"
 								],
 								"type": "text/javascript",
 								"packages": {}
