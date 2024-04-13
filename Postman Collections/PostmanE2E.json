@@ -187,6 +187,139 @@
 					"response": []
 				},
 				{
+					"name": "get prudct by variable",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
+								"exec": [
+									"const schemaTest = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"total\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"limit\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"skip\": {\r",
+									"      \"type\": \"integer\"\r",
+									"    },\r",
+									"    \"data\": {\r",
+									"      \"type\": \"array\",\r",
+									"      \"items\": [\r",
+									"        {\r",
+									"          \"type\": \"object\",\r",
+									"          \"properties\": {\r",
+									"            \"id\": {\r",
+									"              \"type\": \"integer\"\r",
+									"            },\r",
+									"            \"name\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"type\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"price\": {\r",
+									"              \"type\": \"integer\"\r",
+									"            },\r",
+									"            \"upc\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"shipping\": {\r",
+									"              \"type\": \"integer\"\r",
+									"            },\r",
+									"            \"description\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"manufacturer\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"model\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"url\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"image\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"createdAt\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"updatedAt\": {\r",
+									"              \"type\": \"string\"\r",
+									"            },\r",
+									"            \"categories\": {\r",
+									"              \"type\": \"array\",\r",
+									"              \"items\": {}\r",
+									"            }\r",
+									"          },\r",
+									"          \"required\": [\r",
+									"            \"id\",\r",
+									"            \"name\",\r",
+									"            \"type\",\r",
+									"            \"price\",\r",
+									"            \"upc\",\r",
+									"            \"shipping\",\r",
+									"            \"description\",\r",
+									"            \"manufacturer\",\r",
+									"            \"model\",\r",
+									"            \"url\",\r",
+									"            \"image\",\r",
+									"            \"createdAt\",\r",
+									"            \"updatedAt\",\r",
+									"            \"categories\"\r",
+									"          ]\r",
+									"        }\r",
+									"      ]\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"    \"total\",\r",
+									"    \"limit\",\r",
+									"    \"skip\",\r",
+									"    \"data\"\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test(\"validate the json response schema\",function(){\r",
+									"pm.response.to.have.jsonSchema(schemaTest);\r",
+									"pm.response.to.have.status(200);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bfa791ab-dcf0-4139-aa4b-d4674d0a20eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products?id={{product_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{product_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Categories listing",
 					"id": "1c882592-1233-4bc7-81d7-d6f698049537",
 					"protocolProfileBehavior": {
@@ -501,6 +634,10 @@
 			"key": "upc",
 			"value": "",
 			"type": "string"
+		},
+		{
+			"key": "product_id",
+			"value": ""
 		}
 	]
 }
