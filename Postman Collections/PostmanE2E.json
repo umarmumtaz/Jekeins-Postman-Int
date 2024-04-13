@@ -199,7 +199,7 @@
 									"console.log(testVariable1)",
 									"",
 									"pm.test(\"verify the value with inputing the variable\",function(){",
-									"    pm.expect(testVariable1[0].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
+									"    pm.expect(testVariable1.data[0].name).to.eql(pm.collectionVariables.get(\"user_name\"))",
 									"})",
 									"",
 									""
@@ -217,7 +217,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/products?id=9999862",
+							"raw": "{{url}}/products?id=9999891",
 							"host": [
 								"{{url}}"
 							],
@@ -227,7 +227,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "9999862"
+									"value": "9999891"
 								}
 							]
 						}
@@ -647,7 +647,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "f78ccd7f-60f2-477e-9da6-a7c9dec47c39",
+				"id": "0b9a290c-1267-4b3c-be65-d6679b6a827e",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -665,7 +665,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "83df3447-60e2-4728-a3de-ff505ac68a6b",
+				"id": "be044b6f-265c-4ff2-b0aa-9d2c7e440a2a",
 				"type": "text/javascript",
 				"exec": [
 					""
