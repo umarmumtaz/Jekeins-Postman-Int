@@ -168,8 +168,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{url}}/products?id=9999862",
+							"raw": "{{url}}/products?id=9999993",
 							"host": [
 								"{{url}}"
 							],
@@ -179,7 +188,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "9999862"
+									"value": "9999993"
 								}
 							]
 						}
