@@ -199,8 +199,6 @@
 									"pm.test(\"verify the value with inputing the variable\",function(){\r",
 									"pm.expect(testVariable1[0].price).to.eql(pm.collectionVariables.get(\"Price_value\"))\r",
 									"\r",
-									"\r",
-									"\r",
 									"})"
 								],
 								"type": "text/javascript",
@@ -645,7 +643,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "e57d9c4f-cf49-4eb9-a1e2-71b5789b9023",
+				"id": "f375d4c4-1579-4deb-a11f-966ac690a39a",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -663,7 +661,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "db238ab0-9346-4f8c-bb60-5f85f0fd6574",
+				"id": "06c0d55a-cf9b-4c50-aeb7-7399c4eb06f9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -685,6 +683,11 @@
 		{
 			"key": "product_id",
 			"value": ""
+		},
+		{
+			"key": "Price_value",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
