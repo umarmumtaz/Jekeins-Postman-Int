@@ -576,12 +576,12 @@
 									"console.log(code);\r",
 									"const value =pm.variables.replaceIn('{{$randomInt}}');//random\r",
 									"pm.collectionVariables.set('upc', code+value);\r",
-									"pm.collectionVariables.set(\"name\",pm.iterationData.get(\"user_name\"));\r",
+									"pm.collectionVariables.set(\"name\",pm.iterationData.get(\"name\"));\r",
 									"console.log(pm.collectionVariables.get(\"user_name\"));\r",
 									"\r",
-									"pm.collectionVariables.set(\"type\",pm.iterationData.get(\"type\"));\r",
+									"pm.collectionVariables.set(\"type_name\",pm.iterationData.get(\"type\"));\r",
 									"\r",
-									"pm.collectionVariables.set(\"price\", pm.iterationData.get(\"price\"));\r",
+									"pm.collectionVariables.set(\"price_name\", pm.iterationData.get(\"price\"));\r",
 									""
 								],
 								"type": "text/javascript",
@@ -832,7 +832,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "45fdf75f-69a6-461e-b76f-39097d86c55f",
+				"id": "f5fa2380-5eb1-4a99-a90d-5999eac20422",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -850,7 +850,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "99103b35-0055-4f07-80b5-f10b824c94fb",
+				"id": "71b5748d-3121-4cca-9e93-f76d789b1c6a",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -879,34 +879,14 @@
 			"type": "string"
 		},
 		{
-			"key": "name",
-			"value": ""
+			"key": "type_name",
+			"value": "",
+			"type": "string"
 		},
 		{
-			"key": "type",
-			"value": ""
-		},
-		{
-			"key": "price",
-			"value": ""
-		},
-		{
-			"key": {
-				"id": 9999933,
-				"name": "Umar",
-				"type": "mobile",
-				"price": 451,
-				"upc": "Test10758",
-				"shipping": 0,
-				"description": "Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack",
-				"manufacturer": "Duracell",
-				"model": "MN1500B8Z",
-				"url": "http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC",
-				"image": "http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg",
-				"updatedAt": "2024-04-13T19:12:08.150Z",
-				"createdAt": "2024-04-13T19:12:08.150Z"
-			},
-			"value": ""
+			"key": "price_name",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
