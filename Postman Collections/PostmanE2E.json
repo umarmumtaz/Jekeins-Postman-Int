@@ -256,6 +256,8 @@
 									"    var responseBody = pm.response.json();",
 									"    console.log(responseBody)",
 									"    console.log(responseBody.id)",
+									"    const productid=responseBody.id;",
+									"    pm.collectionVariables.set(\"product_id\",productid )",
 									"    // Check if the response body contains the expected key-value pairs",
 									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
 									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
