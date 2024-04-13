@@ -422,8 +422,8 @@
 									"pm.test(\"Validate the headers values\",function(){\r",
 									"  pm.response.to.have.header(\"Content-Type\");\r",
 									"  pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json;charset=UTF-8\");\r",
-									"\r",
-									" // pm.expect(pm.response.text()).to.include(\"Email address already exists\");\r",
+									"pm.expect(pm.response.responseTime).to.be.below(1000)\r",
+									" pm.expect(pm.response.text()).to.include(\"Email address already exists\");\r",
 									"});\r",
 									"\r",
 									""
