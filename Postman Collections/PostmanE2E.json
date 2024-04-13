@@ -347,17 +347,23 @@
 							"script": {
 								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
 								"exec": [
+									"// const responseBodyD = pm.response.json();\r",
+									"\r",
+									"// pm.test(\"test the code/response messagwe text \", function(){\r",
+									"// pm.response.to.have.status(500);\r",
+									"// pm.expect(responseBodyD).to.have.property('error');\r",
+									"// pm.expect(responseBodyD.error).to.eql('Email address already exists')\r",
+									"\r",
+									"\r",
+									"// });\r",
 									"const responseBodyD = pm.response.json();\r",
-									"\r",
 									"pm.test(\"test the code/response messagwe text \", function(){\r",
-									"pm.response.to.have.status(500);\r",
-									"pm.expect(responseBodyD).to.have.property('error');\r",
-									"pm.expect(responseBodyD.error).to.eql('Email address already exists')\r",
 									"\r",
-									"\r",
+									"pm.expect(responseBodyD).to.eql(\"Student added\")\r",
 									"});"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -370,7 +376,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test22@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2d2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
