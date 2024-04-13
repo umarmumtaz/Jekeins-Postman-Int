@@ -23,7 +23,7 @@
 									"    // Parse the response body from JSON string to JavaScript object\r",
 									"    var responseBody = pm.response.json();\r",
 									"    // Check if the response body contains the expected key-value pairs\r",
-									" pm.expect(responseBody.upc).to.equal('041333216010');\r",
+									" pm.expect(responseBody.upc).to.equal('041333825014');\r",
 									"    pm.expect(responseBody.price).to.equal('5.99');\r",
 									"});\r",
 									""
@@ -162,6 +162,46 @@
 						}
 					],
 					"id": "6111b1fe-1100-4fac-b372-ee336ffa7d4b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products?id=9999862",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9999862"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single product 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "188fb4c5-77fb-4440-aa56-5bea88339e45",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -509,7 +549,7 @@
 									"    pm.expect(expectedId).to.eql(productTid); ",
 									"});",
 									"",
-									"//pending"
+									"//pending lec 5.1"
 								],
 								"type": "text/javascript",
 								"packages": {}
