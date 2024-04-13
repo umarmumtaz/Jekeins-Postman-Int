@@ -505,8 +505,11 @@
 									"    const upcValue = pm.collectionVariables.get('upc');",
 									"    const priceValue = responseBody.price; ",
 									"    const expectedId = upcValue + priceValue; ",
+									"    ",
 									"    pm.expect(expectedId).to.eql(productTid); ",
-									"});"
+									"});",
+									"",
+									"//pending"
 								],
 								"type": "text/javascript",
 								"packages": {}
