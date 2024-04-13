@@ -23,7 +23,7 @@
 									"    // Parse the response body from JSON string to JavaScript object\r",
 									"    var responseBody = pm.response.json();\r",
 									"    // Check if the response body contains the expected key-value pairs\r",
-									" pm.expect(responseBody.upc).to.equal('Test10723');\r",
+									" pm.expect(responseBody.upc).to.equal('upc_name');\r",
 									"    pm.expect(responseBody.price).to.equal('5.99');\r",
 									"});\r",
 									""
@@ -1005,6 +1005,10 @@
 			"key": "price_name",
 			"value": "",
 			"type": "string"
+		},
+		{
+			"key": "upc_name",
+			"value": ""
 		}
 	]
 }
