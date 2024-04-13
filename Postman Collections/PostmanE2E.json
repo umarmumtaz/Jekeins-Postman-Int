@@ -366,7 +366,7 @@
 			"name": "Post products",
 			"item": [
 				{
-					"name": "Add product",
+					"name": "Add product using variables collection",
 					"event": [
 						{
 							"listen": "test",
@@ -458,7 +458,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/products?id=9999772",
+							"raw": "{{url}}/products?id={{product_id}}",
 							"host": [
 								"{{url}}"
 							],
@@ -468,8 +468,7 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "9999772",
-									"type": "text"
+									"value": "{{product_id}}"
 								}
 							]
 						}
