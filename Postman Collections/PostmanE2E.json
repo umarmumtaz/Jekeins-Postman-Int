@@ -195,9 +195,9 @@
 								"id": "eb7e7fcc-6ae2-48ec-b4d5-d931e96db5be",
 								"exec": [
 									"const testVariable1 =pm.response.json();\r",
-									"\r",
+									"console.log(testVariable1)\r",
 									"pm.test(\"verify the value with inputing the variable\",function(){\r",
-									"pm.expect()\r",
+									"pm.expect(testVariable1[0].price).to.eql(pm.collectionVariables.get(\"Price_value\"))\r",
 									"\r",
 									"\r",
 									"\r",
@@ -441,6 +441,7 @@
 									"    // Check if the response body contains the expected key-value pairs",
 									"    pm.expect(responseBody.manufacturer).to.equal('Duracell');",
 									"    pm.expect(responseBody.model).to.equal('MN1500B8Z');",
+									"    ",
 									"});",
 									"",
 									""
@@ -475,7 +476,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Duracell - AA Batteries (8-Pack)\",\r\n    \"type\": \"mobile\",\r\n    \"price\": 451,\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Duracell - AA Batteries (8-Pack)\",\r\n    \"type\": \"mobile\",\r\n    \"price\": {{Price_value}},\r\n    \"upc\": \"{{upc}}\",\r\n    \"shipping\": 0,\r\n    \"description\": \"Compatible with select electronic devices; AA size; DURALOCK Power Preserve technology; 8-pack\",\r\n    \"manufacturer\": \"Duracell\",\r\n    \"model\": \"MN1500B8Z\",\r\n    \"url\": \"http://www.bestbuy.com/site/duracell-aa-batteries-8-pack/127687.p?id=1051384045676&skuId=127687&cmp=RMXCC\",\r\n    \"image\": \"http://img.bbystatic.com/BestBuy_US/images/products/1276/127687_sa.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
