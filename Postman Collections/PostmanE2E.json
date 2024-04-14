@@ -889,13 +889,33 @@
 					"response": []
 				},
 				{
-					"name": "Error handling, add/delete email",
+					"name": "Error handling,1 /delete email",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
 								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fff3e51e-cc61-4588-983c-5e9a82320967",
+								"exec": [
+									"pm.test(\"Email should be deleted successfully\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.success).to.be.true;\r",
+									"    pm.expect(responseJson.message).to.include(\"Email address already exists\");\r",
+									"});\r",
+									"\r",
+									"// Optionally, trigger the next request in collection if you are running a collection runner\r",
+									"postman.setNextRequest(\"Add Email Request\");\r",
 									""
 								],
 								"type": "text/javascript",
@@ -912,7 +932,42 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2dcffvcdd2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"raw": "{\r\n  \"email\": \"{{existingEmail}}\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url2}}/student/"
+					},
+					"response": []
+				},
+				{
+					"name": "Error handling,2 add email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "41cefb5a-68ad-4c72-a30a-b95da87b6d38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"{{newEmail}}\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
