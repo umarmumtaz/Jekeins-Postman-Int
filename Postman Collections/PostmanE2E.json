@@ -889,6 +889,41 @@
 					"response": []
 				},
 				{
+					"name": "Error handling, add/delete email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "0f7bec28-aa2c-4714-a624-50a16de75844",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"firstName\": \"nanncy1\",\r\n        \"lastName\": \"kevin1\",\r\n        \"email\": \"test2dcffvcdd2d@gmail.com\",\r\n        \"programme\": \"CS\",\r\n        \"courses\": [\r\n            \"IT\",\r\n            \"QA\"\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url2}}/student/"
+					},
+					"response": []
+				},
+				{
 					"name": "verify header with assertions",
 					"event": [
 						{
@@ -946,7 +981,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0f415d9c-7eac-465b-807b-54fd19cbd3d0",
+				"id": "ee5fe658-4ca3-4b0e-b03f-83700b2d5da5",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -964,7 +999,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "71193fcf-ccb5-402a-9dba-73ed7d051135",
+				"id": "3fa5abd2-e29d-4ad0-8d1e-af5622e46119",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1009,6 +1044,11 @@
 		{
 			"key": "upc_name",
 			"value": ""
+		},
+		{
+			"key": "url2",
+			"value": "http://localhost:8090",
+			"type": "string"
 		}
 	]
 }
