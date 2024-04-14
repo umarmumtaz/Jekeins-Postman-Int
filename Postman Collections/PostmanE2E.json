@@ -889,7 +889,7 @@
 					"response": []
 				},
 				{
-					"name": "Error handling,1 /delete email",
+					"name": "Error Handlind - 1-Delete",
 					"event": [
 						{
 							"listen": "test",
@@ -944,13 +944,30 @@
 					"response": []
 				},
 				{
-					"name": "Error handling,2 add email",
+					"name": "Error Handlind - 1-Add",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "7e2b0a59-1e1c-40c9-86a4-6c336b448b70",
 								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1783dd0e-5a95-40ad-ae7c-e08f6d869d3e",
+								"exec": [
+									"pm.test(\"Email should be added successfully\", function() {\r",
+									"    pm.expect(pm.response.code).to.eql(200);\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.success).to.be.true;\r",
+									"    pm.expect(responseJson.message).to.include(\"added successfully\");\r",
+									"});\r",
 									""
 								],
 								"type": "text/javascript",
@@ -1036,7 +1053,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "ee5fe658-4ca3-4b0e-b03f-83700b2d5da5",
+				"id": "8938060f-69c9-489b-a3e3-c476bbb1ce66",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1054,7 +1071,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "3fa5abd2-e29d-4ad0-8d1e-af5622e46119",
+				"id": "254d4995-3932-4e33-9be5-3e4357e3b667",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1103,6 +1120,16 @@
 		{
 			"key": "url2",
 			"value": "http://localhost:8090",
+			"type": "string"
+		},
+		{
+			"key": "newEmail",
+			"value": "nanncykevin@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "existingEmail",
+			"value": "nanncykevin@gmail.com",
 			"type": "string"
 		}
 	]
