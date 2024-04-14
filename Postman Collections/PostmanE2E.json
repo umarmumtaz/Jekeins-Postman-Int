@@ -915,7 +915,7 @@
 									"});\r",
 									"\r",
 									"// Optionally, trigger the next request in collection if you are running a collection runner\r",
-									"postman.setNextRequest(\"Add Email Request\");\r",
+									"postman.setNextRequest(\"Add Email\");\r",
 									""
 								],
 								"type": "text/javascript",
@@ -932,7 +932,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"{{existingEmail}}\",\r\n  \"firstName\": \"nanncy1\",\r\n\"lastName\": \"kevin1\",\r\n\"programme\": \"CS\"\r\n\r\n}\r\n",
+							"raw": "{\r\n  \"email\": \"{{existingEmail}}\"\r\n//   \"firstName\": \"nanncy1\",\r\n// \"lastName\": \"kevin1\",\r\n// \"programme\": \"CS\"\r\n\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -968,7 +968,7 @@
 									"    pm.expect(responseJson.success).to.be.true;\r",
 									"    pm.expect(responseJson.message).to.include(\"added successfully\");\r",
 									"});\r",
-									""
+									"postman.setNextRequest(null);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -984,7 +984,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"{{newEmail}}\"\r\n}\r\n",
+							"raw": "{\r\n  \"email\": \"{{newEmail}}\",\r\n\"firstName\": \"nanncy1\",\r\n\"lastName\": \"kevin1\",\r\n\"programme\": \"CS\"\r\n\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
