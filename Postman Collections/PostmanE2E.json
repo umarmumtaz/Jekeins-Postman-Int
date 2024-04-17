@@ -1123,12 +1123,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkI2NjM0MzVDMTM1ODhDREQ3ODE0OUY2ODlEMUU0NzQ0MUVEMjU1MDhSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6InRtTkRYQk5Zak4xNEZKOW9uUjVIUkI3U1ZRZyJ9.eyJuYmYiOjE3MTMzNDY0MjUsImV4cCI6MTcxMzQzMjgyNSwiaXNzIjoiaHR0cDovLzEyNy4wLjAuMS9pZGVudGl0eWFwaTIxIiwiY2xpZW50X2lkIjoiYXRzLmNsaWVudC51c2VyLmJldGEiLCJzdWIiOiJVbWFyIiwiYXV0aF90aW1lIjoxNzEzMzQ2NDI1LCJpZHAiOiJsb2NhbCIsImlkZW50aXR5LWluZm8iOiJXVGZLY1ZCTm5DRFRZem5weVgzMWZPOTE4OC9EMldIcFUvc0pKbDV6VWhpNURmWUlRaG5aN1ZNUjBBMkgya2tIOVA2bnBQQUtBS3BIdVRFaHQ5VmxacVo3OFJkTWtPb0w2MkJKU0Y3OHZCUzl3cEkxS3RnWUtpSFJPajduRG1HblkvWWN1RGRKalFsS0lRMTlKRUZFZ2dJcGFuajNvejM4TzZZTGRVV2UrV2RoZEdPSTN5Mk5URHlPY05VeVNuVlhRZURVYmdWMHhzQ3pzSDdzS2NXRVEzTlQzWGJDRDhWRWtHclVUejJXcVd1UVR5KzY3ZEFyOGZZb3lGa1ZJNGpWd3I3UU5ScUNKVVJ2THNlZzRKZWxpVy9pb2ZyQndqUVJSZFVHSzN1ZkRYdGJBd1BrMk5xQkVMSC82WWRGTlV3cWxiNmlDMXpaaFF5RG5QUWJyWThsVFE9PSIsInR5cGUiOiI2IiwicmVmZXJlbmNlaWQiOiI0NDMxMTQiLCJpYXQiOjE3MTMzNDY0MjUsInNjb3BlIjpbImFsZXJ0c2V0dXBhcGkiLCJhc3Nlc3NtZW50Zm9ybWFwaSIsImNhbGVuZGFyYXBpIiwiY2FuZGlkYXRlaGlzdG9yeWxvZ2FwaSIsImNvbnZlcnRlcmRiYXBpIiwiZ2VuZXJhbHNldHVwYXBpIiwiaWRlbnRpdHlzZXJ2ZXJhcGkiLCJpbnRlZ3JhdGlvbmFwaSIsImpvYnNhbmR0YWxlbnRzYXBpIiwibWVkaWFsaWJyYXJ5YXBpIiwibXVsdGlkb2N1bWVudGFwaSIsIm9uYm9hcmRpbmdhcGkiLCJzZWFyY2hhcGkiLCJzeXN0ZW1saXN0aW5nYXBpIiwic3lzdGVtc2V0dGluZ3NhcGkiLCJ0cmFuc2xhdGlvbmFwaSIsInVzZXJhY3Rpdml0eWxvZ2FwaSIsInVzZXJtYW5hZ2VtZW50YXBpIl0sImFtciI6WyJjdXN0b20iXX0.FwyfGUOb1jvjw6ZA-5FYjZvOhdJshgg5d7IZ4UpiY0O3845rK1F0VFgUaGQovPoVHTgfVaicjQyzjm26VTaemtGRFJ1IHxag8vwxoZhf8GlTqlB96DSeF5tHnAY_fWbrb0qKlCZQ--9GgNmjHrLuMujK_6_Qoyr8qJCHl6CWCWw2Ga5dLeltgCoGHu2kVXE0mLBkXzjq-X0ls3doaNM7ZN56au7op4yZdklkaKqnyytF7uRcwxK_OK54n1yaBtOdDyeuoWvbUYxG0wU4jKNFxtt4oL-spMo1Y_Ox1gUbtE3NhaXXwfTg_Gy5EaiOJTUeEuxImSP4Vn3nlrVIuMpmMQ"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/v{{version}}/Department/:id",
+							"raw": "{{url3}}/api/v{{version}}/Department/:id",
 							"host": [
-								"{{baseUrl}}"
+								"{{url3}}"
 							],
 							"path": [
 								"api",
@@ -1138,9 +1144,8 @@
 							],
 							"variable": [
 								{
-									"id": "eddb44e9-9490-4a8c-854e-e5c460dd4b6a",
 									"key": "id",
-									"value": "<integer>"
+									"value": "142"
 								}
 							]
 						}
@@ -1194,7 +1199,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "367f38aa-2b1d-4066-ace3-c4a33a8e9a46",
+				"id": "5c06d381-1dd3-4321-95fc-2bb57c1efa21",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1212,7 +1217,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7c12b71a-8dd7-4276-97f8-fb41d6487005",
+				"id": "f05368fe-106a-4ab6-b12d-fdd9f9fd3b86",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1276,6 +1281,11 @@
 		{
 			"key": "url3",
 			"value": "https://beta.jobtrain.co.uk/openapi",
+			"type": "string"
+		},
+		{
+			"key": "version",
+			"value": "1",
 			"type": "string"
 		}
 	]
