@@ -1075,7 +1075,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/connect/token"
+						"url": "{{url3}}/connect/token"
 					},
 					"response": [
 						{
@@ -1115,6 +1115,76 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "/api/v{{version}}/Department/:id Copy",
+					"id": "518db824-1f59-4791-8551-f6b8e632ad94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v{{version}}/Department/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v{{version}}",
+								"Department",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "eddb44e9-9490-4a8c-854e-e5c460dd4b6a",
+									"key": "id",
+									"value": "<integer>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "fdf0500d-4653-43bc-839a-484cf4f1804d",
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v{{version}}/Department/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v{{version}}",
+										"Department",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
 				}
 			],
 			"id": "df51edf3-1cbd-4b1f-a13b-90772c203c76"
@@ -1124,7 +1194,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "a6968a95-97f5-4843-af1f-54a1113c06b4",
+				"id": "367f38aa-2b1d-4066-ace3-c4a33a8e9a46",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1142,7 +1212,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "76b48b05-439b-469b-985e-75b2dc42dd99",
+				"id": "7c12b71a-8dd7-4276-97f8-fb41d6487005",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1205,7 +1275,7 @@
 		},
 		{
 			"key": "url3",
-			"value": "https://beta.jobtrain.co.uk/openapi/",
+			"value": "https://beta.jobtrain.co.uk/openapi",
 			"type": "string"
 		}
 	]
