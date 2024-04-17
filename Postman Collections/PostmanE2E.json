@@ -1213,8 +1213,22 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"clientSecret": "8a57d581b95139a73c8964f6fbf094a937eda4bf",
+								"clientId": "fce412c707940e2",
+								"accessTokenUrl": "https://api.imgur.com/oauth2/token",
+								"authUrl": "https://api.imgur.com/oauth2/authorize",
+								"grant_type": "authorization_code",
+								"tokenName": "Demo Token",
+								"useBrowser": true,
+								"addTokenTo": "header"
+							}
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "https://imgur.com/3/account/me/images"
 					},
 					"response": []
 				}
