@@ -1047,13 +1047,84 @@
 				}
 			],
 			"id": "843fa981-91d7-4297-8cff-53a25db41b3b"
+		},
+		{
+			"name": "Oauth requests",
+			"item": [
+				{
+					"name": "/connect/token test",
+					"id": "24e93c14-a4f9-42e5-82ed-d5dd39e20559",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"clientId\": \"ats.client.user.beta\",\n  \"clientSecret\": \"O2Q6b0S/1DwLj8ZwtgLjcuS0I5Y=\",\n  \"username\": \"Umar\",\n  \"password\": \"kY~eqBy3cjTui%!?97N,cf$8H\",\n  \"apiKey\": \"string\"\n}\n\n",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/connect/token"
+					},
+					"response": [
+						{
+							"id": "2348cfc6-a7da-4816-8364-db99277a9fab",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"clientId\": \"ro.client.user.db1\",\n  \"clientSecret\": \"secret\",\n  \"username\": \"aqeel_2fa\",\n  \"password\": \",A19$yyLsq33~fF5gZ8fl<>9W\",\n  \"apiKey\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/connect/token"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "df51edf3-1cbd-4b1f-a13b-90772c203c76"
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "8938060f-69c9-489b-a3e3-c476bbb1ce66",
+				"id": "a6968a95-97f5-4843-af1f-54a1113c06b4",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1071,7 +1142,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "254d4995-3932-4e33-9be5-3e4357e3b667",
+				"id": "76b48b05-439b-469b-985e-75b2dc42dd99",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1130,6 +1201,11 @@
 		{
 			"key": "existingEmail",
 			"value": "nanncykevin@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "url3",
+			"value": "https://beta.jobtrain.co.uk/openapi/",
 			"type": "string"
 		}
 	]
