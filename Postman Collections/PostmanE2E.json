@@ -1234,14 +1234,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "github test",
 					"id": "5219a42d-ac18-428c-8f76-9b57da1ef72d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "https://api.github.com/user/repos"
 					},
 					"response": []
 				}
