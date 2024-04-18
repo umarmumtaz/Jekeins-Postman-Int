@@ -1246,36 +1246,6 @@
 						"url": "https://api.github.com/user/repos"
 					},
 					"response": []
-				},
-				{
-					"name": "8-schema_verification",
-					"id": "047ca9e9-fb0c-4073-ad4c-ff1bbcb9448c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=rahul",
-							"protocol": "https",
-							"host": [
-								"rahulshettyacademy",
-								"com"
-							],
-							"path": [
-								"Library",
-								"GetBook.php"
-							],
-							"query": [
-								{
-									"key": "AuthorName",
-									"value": "rahul"
-								}
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"id": "df51edf3-1cbd-4b1f-a13b-90772c203c76"
