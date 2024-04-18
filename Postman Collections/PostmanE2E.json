@@ -1146,6 +1146,10 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
 							"raw": "{{url3}}/api/v{{version}}/Department/:id",
 							"host": [
@@ -1165,46 +1169,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"id": "fdf0500d-4653-43bc-839a-484cf4f1804d",
-							"name": "Success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"description": "Added as a part of security scheme: apikey",
-										"key": "Authorization",
-										"value": "<API Key>"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/api/v{{version}}/Department/:id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"api",
-										"v{{version}}",
-										"Department",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "text",
-							"header": [],
-							"cookie": [],
-							"responseTime": null,
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "authimplure",
