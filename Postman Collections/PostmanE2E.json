@@ -1240,6 +1240,12 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "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"
+							}
+						},
 						"method": "GET",
 						"header": [],
 						"url": "https://api.github.com/user/repos"
