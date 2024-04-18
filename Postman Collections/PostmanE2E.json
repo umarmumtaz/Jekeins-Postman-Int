@@ -1150,24 +1150,7 @@
 							"mode": "formdata",
 							"formdata": []
 						},
-						"url": {
-							"raw": "{{url3}}/api/v{{version}}/Department/:id",
-							"host": [
-								"{{url3}}"
-							],
-							"path": [
-								"api",
-								"v{{version}}",
-								"Department",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "142"
-								}
-							]
-						}
+						"url": "{{url3}}/api/v{{version}}/Department"
 					},
 					"response": []
 				},
