@@ -1232,6 +1232,18 @@
 						"url": "https://imgur.com/3/account/me/images"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "5219a42d-ac18-428c-8f76-9b57da1ef72d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "df51edf3-1cbd-4b1f-a13b-90772c203c76"
