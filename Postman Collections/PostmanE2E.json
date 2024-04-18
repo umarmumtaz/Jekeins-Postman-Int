@@ -1234,8 +1234,8 @@
 					"response": []
 				},
 				{
-					"name": "github test",
-					"id": "5219a42d-ac18-428c-8f76-9b57da1ef72d",
+					"name": "GitRequest",
+					"id": "f78fe009-71f9-467b-bf6e-ea1711f0f80f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1243,12 +1243,11 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "{{Git_token}}"
+								"token": "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"
 							}
 						},
 						"method": "GET",
-						"header": [],
-						"url": "https://api.github.com/user/repos"
+						"header": []
 					},
 					"response": []
 				}
@@ -1260,7 +1259,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1e9de913-eddc-4766-9c40-c519147f5f75",
+				"id": "e8a4dcc8-9fd1-48bf-aaef-064392a671c0",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1278,7 +1277,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "430fb08f-c9c2-4b28-951c-8e8c4ddbc7e7",
+				"id": "3466efe1-1c34-4ab0-a737-1a607ea35868",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1347,11 +1346,6 @@
 		{
 			"key": "version",
 			"value": "1",
-			"type": "string"
-		},
-		{
-			"key": "Git_token",
-			"value": "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",
 			"type": "string"
 		}
 	]
