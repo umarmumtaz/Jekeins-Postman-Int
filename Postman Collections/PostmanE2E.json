@@ -1133,6 +1133,36 @@
 				},
 				{
 					"name": "/api/v{{version}}/Department/:id Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8dc5458d-4a56-4877-855a-14caad1386e9",
+								"exec": [
+									"const SchemaStandard2 = {\r",
+									"    \"status\": 200,\r",
+									"    \"message\": null,\r",
+									"    \"resultData\": {\r",
+									"        \"id\": 140,\r",
+									"        \"departmentName\": \"aPOSTDepartment2\",\r",
+									"        \"departmentHead\": \"Jane Smith Jr\",\r",
+									"        \"costCentreName\": \"2\",\r",
+									"        \"email\": \"postCostCentre2@email.com\"\r",
+									"    },\r",
+									"    \"errors\": []\r",
+									"}\r",
+									"\r",
+									"pm.test(\"validate the json SchemaStandard2\",function(){\r",
+									"pm.response.to.have.jsonSchema(SchemaStandard2)\r",
+									"\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "518db824-1f59-4791-8551-f6b8e632ad94",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
