@@ -1243,7 +1243,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "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"
+								"token": "{{Git_token}}"
 							}
 						},
 						"method": "GET",
@@ -1260,7 +1260,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "5c06d381-1dd3-4321-95fc-2bb57c1efa21",
+				"id": "1e9de913-eddc-4766-9c40-c519147f5f75",
 				"type": "text/javascript",
 				"exec": [
 					"// console.log (\"hello world....\"); //print simple text",
@@ -1278,7 +1278,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "f05368fe-106a-4ab6-b12d-fdd9f9fd3b86",
+				"id": "430fb08f-c9c2-4b28-951c-8e8c4ddbc7e7",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1347,6 +1347,11 @@
 		{
 			"key": "version",
 			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "Git_token",
+			"value": "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",
 			"type": "string"
 		}
 	]
